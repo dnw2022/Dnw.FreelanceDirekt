@@ -1,11 +1,13 @@
+@using Dnw.FreelanceDirekt.Extensions;
+
 <ul class="nav nav-pills" id="mainNav">
     <li class="dropdown">
-        <a class="dropdown-item" href="/">
+        <a class="dropdown-item @(Html.IsActiveMenuLink("Home") ? "active current-page-active" : "")" href="/">
             Home
         </a>
     </li>
     <li class="dropdown">
-        <a class="dropdown-item" href="/Faq">
+        <a class="dropdown-item @(Html.IsActiveMenuLink("Faq") ? "active current-page-active" : "")" href="/Faq">
             FAQ
         </a>
     </li>

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: freelancedirekt-website-deployment
+spec:
+  selector:
+    matchLabels:
+      app: freelancedirekt-website
+  template:
+    metadata:
+      labels:
+        app: freelancedirekt-website
+    spec:
+      containers:
+        - name: freelancedirekt-website
+          image: acrdnw.azurecr.io/freelancedirekt-website:latest
+          # resources:
+          #   limits:
+          #     memory: "128Mi"
+          #     cpu: "500m"
+          ports:
+            - containerPort: 5050

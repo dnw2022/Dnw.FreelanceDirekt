@@ -8,6 +8,7 @@
     "AspNetCoreFunction": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
+        "FunctionName": "Dnw-FreelanceDirekt",
         "Handler": "Dnw.FreelanceDirekt",
         "Architectures": [ "x86_64" ],
         "Runtime": "provided.al2",
